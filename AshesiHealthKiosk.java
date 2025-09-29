@@ -136,19 +136,16 @@ public class AshesiHealthKiosk {
 
         if (!studentFirstName.isEmpty()){
             baseCode = studentFirstName.charAt(0);
-        } else {
-            System.out.println("You must enter a valid name");
-        }
-        
-        char shiftedLetter = (char) ('A' + (baseCode - 'A' + 2) % 26);
 
-        String lastTwoChars = patientCode.substring(3);
+            char shiftedLetter = (char) ('A' + (baseCode - 'A' + 2) % 26);
 
-        String studentCode = "" + shiftedLetter + lastTwoChars + "-" + roundBMI;
+            String lastTwoChars = patientCode.substring(3);
 
-        System.out.println("Code: " + studentCode);
+            String studentCode = "" + shiftedLetter + lastTwoChars + "-" + roundBMI;
 
-        System.out.println();
+            System.out.println("Code: " + studentCode);
+
+            System.out.println();
 
         if (chosenService == "Pharmacy Desk"){
             System.out.println("PHARMACY | ID = " + patientCode + " | Code = " + studentCode);
@@ -158,6 +155,9 @@ public class AshesiHealthKiosk {
             System.out.println("LAB | ID = " + patientCode + " | Code = " + studentCode);
         } else if (chosenService == "Counseling Desk"){
             System.out.println("COUNSELING | ID = " + patientCode + " | Code = " + studentCode);
+            }
+        } else {
+            System.out.println("You must enter a valid name");
         }
     }     
 }
