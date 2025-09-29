@@ -1,1 +1,3 @@
-# Lab2_Ashesi_Health_Kiosk_58742028
+# Oluwademilade Subair Azim
+# 58742028
+# Lab 2
